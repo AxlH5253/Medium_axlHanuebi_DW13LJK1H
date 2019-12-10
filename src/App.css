@@ -1,38 +1,148 @@
+h1{
+  font-family: "noeDisplay";
+  font-weight: normal;
+  font-size: 32px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.76);
+}
+
+h2{
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.76);
+  font-weight: normal;
+  text-align: center;
+  width: 30%;
+  margin-top: 5px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-body {
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header-div{
+  display: flex;
+  width: 100%;
+  align-items:center;
+  justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header-div div{
+  margin: 10px;
+}
+
+.App-content-register{
+  width: 80vw;
+  height: 80vh;
+}
+
+.App-content-login{
+  width: 70vw;
+  height: 70vh;
+}
+
+.App-content-register, .App-content-login{
+  font-family: Sans-Serif;
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.App-content-register{
+  background-image: url("https://cdn-images-1.medium.com/max/900/1*gnUBeL-INIVDk0_GyL8x1g.png");
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+}
+
+.App-form{
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-text-info{
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.76);
+  font-weight: normal;
+  text-align: center;
+  width: 30%;
+  margin-top: 5px;
+}
+
+.App-form input{
+  margin-top: 25px;
+}
+
+.App-form button{
+  margin-top: 25px;
+}
+
+.App-input-group{
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.App-input-group input{
+  border: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+  padding-top: 5px;
+  width: 350px;
+}
+
+.App-input-group .input-label{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.App-arrow-back-text{
+  display: flex;
+  align-items: center;
+}
+
+.App-arrow-back-text span{
+  font-size : 30px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.App-category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  width: 100%;
+  font-size: 16px;
+  font-family:sans-serif;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  background-color:#fff;
+  color: rgba(0,0,0,.54);
+}
+
+.App-category div{
+  margin: 15px;
+}
+
+input:focus{
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+@font-face {
+  font-family: "noeDisplay";
+  src: url("https://glyph.medium.com/font/b6752aa/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/noe-display-500-normal.woff") format('woff');
 }
