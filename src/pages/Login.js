@@ -21,7 +21,7 @@ const buttonSignUpStyle = {
 };
 
 
-const arrowBack = <div className="App-arrow-back-text"><span>&#60;</span>All sign in Options</div>
+const arrowBack = <div className="app-arrow-back-text"><span>&#60;</span>All sign in Options</div>
 
 class Login extends Component{
   render(){
@@ -33,7 +33,9 @@ class Login extends Component{
             <Register/>
           </Route>
           <Route path="/home">
-            <Home/>
+            <div className="app-body">
+               <Home/>
+            </div>
           </Route>
           <Route path="/">
             <Content/>
@@ -49,8 +51,8 @@ class Content extends Component{
 
   render(){
     return(
-      <div className="App-body">
-        <div className="App-content-login">
+      <div className="app-body">
+        <div className="app-content-login">
           <h1>Sign In with email</h1>
           <h2>
             Enter the email address associated with your account,
@@ -67,13 +69,13 @@ class Content extends Component{
 class FormInput extends Component{
   render(){
     return(
-    <div className="App-form">
-      <div className="App-input-group">
+    <div className="app-form">
+      <div className="app-input-group">
         <div className ="input-label">Your email</div>
         <input  type="text" />
       </div>
 
-      <div className="App-input-group"> 
+      <div className="app-input-group"> 
         <div className ="input-label">Your password</div>
         <input type="password" />
       </div>

@@ -4,7 +4,7 @@ import Register from './pages/Register';
 class App extends Component{
   render(){
     return(
-      <div className="App-body">
+      <div className="app-body">
         <Register/>
       </div>
     ); 

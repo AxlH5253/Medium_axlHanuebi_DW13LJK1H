@@ -33,7 +33,7 @@ class Register extends Component{
 class Content extends Component{
   render(){
     return (
-    <div className="App-content-register">
+    <div className="app-content-register">
        <h1>Join Medium.</h1>
        <h2>
          Create an account to receive great stories in your inbox, 
@@ -42,12 +42,12 @@ class Content extends Component{
 
       <FormInput/>
 
-        <div className="App-text-info">
+        <div className="app-text-info">
           <span>Already have an account?</span>
           <Link to="/login" style={{textDecoration: "none"}}><ButtonClear title="Sign in"></ButtonClear></Link>
         </div>
 
-      <div className="App-text-info" style={{marginTop : 30}}>
+      <div className="app-text-info" style={{marginTop : 30}}>
         To make Medium work, we log user data and share it with service providers. 
         Click “Sign up” above to accept Medium’s 
         <span style={{textDecoration:"underline"}}>Terms of Service</span> & 
@@ -61,18 +61,18 @@ class Content extends Component{
 class FormInput extends Component{
   render(){
     return(
-    <div className="App-form">
-      <div className="App-input-group">
+    <div className="app-form">
+      <div className="app-input-group">
         <div className ="input-label">Your username</div>
         <input  type="text" />
       </div>
 
-      <div className="App-input-group"> 
+      <div className="app-input-group"> 
         <div className ="input-label">Your password</div>
         <input type="password" />
       </div>
 
-      <div className="App-input-group">
+      <div className="app-input-group">
         <div className ="input-label">Your email</div>
         <input type="email" />
       </div>

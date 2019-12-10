@@ -15,11 +15,11 @@ h2{
   margin-top: 5px;
 }
 
-.App {
+.app {
   text-align: center;
 }
 
-.App-body {
+.app-body {
   background-color: white;
   min-height: 100vh;
   display: flex;
@@ -28,28 +28,28 @@ h2{
   justify-content: center;
 }
 
-.App-header-div{
+.app-header-div{
   display: flex;
   width: 100%;
   align-items:center;
   justify-content: flex-end;
 }
 
-.App-header-div div{
+.app-header-div div{
   margin: 10px;
 }
 
-.App-content-register{
+.app-content-register{
   width: 80vw;
   height: 80vh;
 }
 
-.App-content-login{
+.app-content-login{
   width: 70vw;
   height: 70vh;
 }
 
-.App-content-register, .App-content-login{
+.app-content-register, .app-content-login{
   font-family: Sans-Serif;
   font-weight: 700;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -59,20 +59,20 @@ h2{
   flex-direction: column;
 }
 
-.App-content-register{
+.app-content-register{
   background-image: url("https://cdn-images-1.medium.com/max/900/1*gnUBeL-INIVDk0_GyL8x1g.png");
   background-repeat: no-repeat;
   background-size: 100% 80%;
 }
 
-.App-form{
+.app-form{
   display: flex;
   flex-direction:column ;
   align-items: center;
   justify-content: center;
 }
 
-.App-text-info{
+.app-text-info{
   font-size: 16px;
   color: rgba(0, 0, 0, 0.76);
   font-weight: normal;
@@ -81,44 +81,46 @@ h2{
   margin-top: 5px;
 }
 
-.App-form input{
+.app-form input{
   margin-top: 25px;
 }
 
-.App-form button{
+.app-form button{
   margin-top: 25px;
 }
 
-.App-input-group{
+.app-input-group{
   text-align: center;
   color: rgba(0, 0, 0, 0.54);
 }
 
-.App-input-group input{
+.app-input-group input{
   border: 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
   padding-top: 5px;
   width: 350px;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 
-.App-input-group .input-label{
+.app-input-group .input-label{
   margin-top: 20px;
   margin-bottom: 0px;
   font-weight: normal;
 }
 
-.App-arrow-back-text{
+.app-arrow-back-text{
   display: flex;
   align-items: center;
 }
 
-.App-arrow-back-text span{
+.app-arrow-back-text span{
   font-size : 30px;
   font-weight: normal;
   margin-right: 10px;
 }
 
-.App-category{
+.app-category{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,11 +132,23 @@ h2{
   font-weight: 400;
   font-style: normal;
   background-color:#fff;
-  color: rgba(0,0,0,.54);
+  color: rgba(0,0,0,0.54);
 }
 
-.App-category div{
-  margin: 15px;
+.app-category div{
+  display: flex;
+  margin: 30px 30px;
+}
+
+.app-category button{
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+
+.app-category div:hover{
+  color: rgba(0,0,0,0.78);
+  cursor: pointer;
 }
 
 input:focus{
