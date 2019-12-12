@@ -1,36 +1,13 @@
 import React, { Component } from 'react';
-import Login from './Login';
 import ButtonPrimary from '../components/ButtonPrimary';
 import ButtonClear from '../components/ButtonClear';
 import '../App.css';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
 class Register extends Component{
-  render(){
-    return(
-      <Router>
-         <div>
-        <Switch>
-          <Route path="/login">
-           <Login/>
-          </Route>
-          <Route path="/">
-            <Content/>
-          </Route>
-        </Switch>
-        </div>
-      </Router>
-    );
-  }
-}
-
-class Content extends Component{
   render(){
     return (
     <div className="app-content-register">

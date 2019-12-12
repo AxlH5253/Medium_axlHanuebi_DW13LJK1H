@@ -22,24 +22,7 @@ const linkStyle = {
   color : 'rgba(0,0,0,0.54)'
 }
 
-export default class Home extends Component{
-   render(){
-     return(
-       <Router>
-          <Switch>
-            <Route path='/articledetail'>
-              <ArticleDetail/>
-            </Route>
-            <Route path='/'>
-              <Content/>
-            </Route>
-          </Switch>
-       </Router> 
-     )
-   }
- }
-
- function Content() {
+ export default function Home() {
     
   const classes = useStyles();
 

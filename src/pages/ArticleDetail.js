@@ -3,7 +3,8 @@ import '../App.css';
 import SearchSharpIcon from '@material-ui/icons/SearchSharp';
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
 import Avatar from '@material-ui/core/Avatar';
-
+import {Link} from "react-router-dom";
+import Follow from './follow';
 
 class ArticleDetail extends Component{
   render(){
@@ -15,12 +16,20 @@ class ArticleDetail extends Component{
   }
 }
 
+const linkStyle = {
+  textDecoration : 'none',
+  color : 'rgba(0,0,0,0.54)'
+}
+
 class Content extends Component{
   render(){
     return(
       <>
       <div className="app-article-header">
-        <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png"></img>
+        <Link to="/home" style={linkStyle}>
+          <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
+          </img>
+        </Link>
         <div className="app-header-div">
           <div><SearchSharpIcon></SearchSharpIcon></div>
           <div><NotificationsNoneOutlinedIcon ></NotificationsNoneOutlinedIcon ></div>
@@ -72,6 +81,7 @@ class Content extends Component{
             </p>
 
         </div>
+        <Follow/>
       </div>
       </>
     )

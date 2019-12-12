@@ -4,6 +4,9 @@ import SearchSharpIcon from '@material-ui/icons/SearchSharp';
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
 import Avatar from '@material-ui/core/Avatar';
 
+import {Link} from "react-router-dom";
+  
+
 const header = {
     display: "flex",
     width: "85%",
@@ -17,6 +20,11 @@ const header = {
     zIndex: "500"
 };
 
+const linkStyle = {
+    textDecoration : 'none',
+    color : 'rgba(0,0,0,0.54)'
+}
+
 class HeaderClass extends Component{
 
     render(){
@@ -24,7 +32,7 @@ class HeaderClass extends Component{
         return(
             <>
             <div position="static" style={header}>
-                <h1 style={{fontWeight:"bold",marginLeft:"20px"}}>Medium</h1>
+                <Link to="/home" style={linkStyle}><h1 style={{fontWeight:"bold",marginLeft:"20px"}}>Medium</h1></Link>
                 <div className="app-header-div">
                     <div><SearchSharpIcon></SearchSharpIcon></div>
                     <div><NotificationsNoneOutlinedIcon ></NotificationsNoneOutlinedIcon ></div>

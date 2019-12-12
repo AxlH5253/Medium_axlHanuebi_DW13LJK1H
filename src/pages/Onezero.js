@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { makeStyles, useTheme  } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
@@ -7,6 +7,17 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+
+import SearchSharpIcon from '@material-ui/icons/SearchSharp';
+import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
+import Avatar from '@material-ui/core/Avatar';
+
+import {Link} from "react-router-dom";
+
+const linkStyle = {
+  textDecoration : 'none',
+  color : 'rgba(0,0,0,0.54)'
+}
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -122,6 +133,19 @@ function CardAnimation() {
   const classes = useStyles();
 
   return (
+  <>
+  <div className="app-article-header">
+    <Link to="/home" style={linkStyle}>
+      <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
+      </img>
+    </Link>
+    <div className="app-header-div">
+      <div><SearchSharpIcon></SearchSharpIcon></div>
+      <div><NotificationsNoneOutlinedIcon ></NotificationsNoneOutlinedIcon ></div>
+      <div><Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" /></div>
+    </div>
+  </div>
+
   <div className={classes.root}>
       <div className="app-onezero-headline">
          <img className="app-onzero-icon" src='https://miro.medium.com/max/400/1*cw32fIqCbRWzwJaoQw6BUg.png'/>
@@ -169,6 +193,7 @@ function CardAnimation() {
         </div>
       </Grid>
   </div>
+  </>
   );
 }
 
