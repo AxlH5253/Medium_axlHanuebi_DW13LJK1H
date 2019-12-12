@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ButtonPrimary from '../components/ButtonPrimary';
 import ButtonClear from '../components/ButtonClear';
 import Register from './Register';
-import Home from './Home';
+import Category from './Category';
 
 import {
   BrowserRouter as Router,
@@ -33,9 +33,7 @@ class Login extends Component{
             <Register/>
           </Route>
           <Route path="/home">
-            <div className="app-body">
-               <Home/>
-            </div>
+            <Category/>
           </Route>
           <Route path="/">
             <Content/>

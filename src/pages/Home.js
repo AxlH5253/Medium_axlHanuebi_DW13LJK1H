@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import HeaderClass from './Header';
-import Category from './Category';
 import { makeStyles, useTheme  } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
@@ -10,109 +8,51 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import Collapse from '@material-ui/core/Collapse';
+import ArticleDetail from './ArticleDetail';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "90%",
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    pointerEvents: 'none',
-    boxShadow: "none",
-  },
-  card: {
-    maxWidth: 600,
-    height: "100%",
-    boxShadow: "none",
-    margin: "0!important",
-    padding: "0!important",
-    border: "0!important",
-    boxShadow: "none!important",
-  },
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-  cardSide:{
-    display: 'flex',
-    height: "110px",
-    boxShadow: "none",
-    margin: "0!important",
-    padding: "0!important",
-    border: "0!important",
-    boxShadow: "none!important",
+const linkStyle = {
+  textDecoration : 'none',
+  color : 'rgba(0,0,0,0.54)'
+}
 
-  },
+export default class Home extends Component{
+   render(){
+     return(
+       <Router>
+          <Switch>
+            <Route path='/articledetail'>
+              <ArticleDetail/>
+            </Route>
+            <Route path='/'>
+              <Content/>
+            </Route>
+          </Switch>
+       </Router> 
+     )
+   }
+ }
 
-  cardSideRight:{
-    display: 'flex',
-    height: "200px",
-    boxShadow: "none",
-    margin: "0!important",
-    padding: "0!important",
-    border: "0!important",
-    boxShadow: "none!important",
-  },
-
-  details: {
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'left',
-    width:"75%"
-  },
-
-  detailSideRight: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: "right",
-    textAlign: 'left',
-    width:"55%",
-    marginRight:"80px"
-  },
-
-  content: {
-    flex: '1 0 auto',
-    width: '100%',
-  },
-  cover: {
-    width: "25%",
-  },
-
-  image:{
-    height: "100%",
-  },
-
-  controls: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingLeft: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-  },
-  
-  media: {
-    height: 400,
-  },
-
-  mediaSmall:{
-    height:220
-  }
-}));
-
- export default function Content() {
+ function Content() {
     
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <HeaderClass/>
-      <Category/>
-
       <Grid container spacing={3} style={{ borderBottom: "1px solid #dae3dc", padding: "20px"}}>
-        <Grid item xs>
-          <Paper className={classes.paper}><MediaCard/></Paper>
-        </Grid>
+        
+        <Link to="/articledetail" style={linkStyle}>
+          <Grid item xs>
+            <Paper className={classes.paper}><MediaCard/></Paper>
+          </Grid>
+        </Link>
+
         <Grid item xs>
           <Paper className={classes.paper}><MediaCardTo/></Paper>
         </Grid>
@@ -463,3 +403,91 @@ function SideCardLeft() {
       </Card>
     );
   }
+
+  const useStyles = makeStyles(theme => ({
+    root: {
+      width: "90%",
+      flexGrow: 1,
+    },
+    paper: {
+      padding: theme.spacing(2),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+      pointerEvents: 'none',
+      boxShadow: "none",
+    },
+    card: {
+      maxWidth: 600,
+      height: "100%",
+      boxShadow: "none",
+      margin: "0!important",
+      padding: "0!important",
+      border: "0!important",
+      boxShadow: "none!important",
+    },
+  
+    cardSide:{
+      display: 'flex',
+      height: "110px",
+      boxShadow: "none",
+      margin: "0!important",
+      padding: "0!important",
+      border: "0!important",
+      boxShadow: "none!important",
+  
+    },
+  
+    cardSideRight:{
+      display: 'flex',
+      height: "200px",
+      boxShadow: "none",
+      margin: "0!important",
+      padding: "0!important",
+      border: "0!important",
+      boxShadow: "none!important",
+    },
+  
+    details: {
+      display: 'flex',
+      flexDirection: 'column',
+      textAlign: 'left',
+      width:"75%"
+    },
+  
+    detailSideRight: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: "right",
+      textAlign: 'left',
+      width:"55%",
+      marginRight:"80px"
+    },
+  
+    content: {
+      flex: '1 0 auto',
+      width: '100%',
+    },
+    cover: {
+      width: "25%",
+    },
+  
+    image:{
+      height: "100%",
+    },
+  
+    controls: {
+      display: 'flex',
+      alignItems: 'center',
+      paddingLeft: theme.spacing(1),
+      paddingBottom: theme.spacing(1),
+    },
+    
+    media: {
+      height: 400,
+    },
+  
+    mediaSmall:{
+      height:220
+    }
+  }));

@@ -24,7 +24,7 @@ const linkStyle = {
     color : 'rgba(0,0,0,0.54)'
 }
 
-export default class Category extends Component{
+class Category extends Component{
     render(){
     return(
         <Router>
@@ -107,32 +107,21 @@ export default class Category extends Component{
     }
 }
 
-class Content extends Component{
+export default class Content extends Component{
+    
     constructor(props) {
         super(props);
         this.state = {
             lbtnClr : "rgba(0,0,0,0.78)",
             rbtnClr : "rgba(0,0,0,0.54)",
             dsl : "inline-block",
-            dsr : "none",
-            category:{
-              home : "HOME",
-              onezero: "ONEZERO",
-              elemental: "ELEMENTAL",
-              gen: "GEN",
-              zora: "ZORA",
-              forge: "FORGE",
-              humanparts: "HUMAN PARTS",
-              marker: "MARKER",
-              level: "LEVEL",
-              heat: "HEAT",
-            }
+            dsr : "none"
         }
       }
 
     render(){
         return(
-            <>
+            <> 
             <div className="app-category">      
                 <button 
                     className="app-arrow-back-text"
@@ -140,7 +129,6 @@ class Content extends Component{
                     onClick={()=> this.setState({ dsl : "inline-block", dsr: "none", lbtnClr : "rgba(0,0,0,0.78)", 
                     rbtnClr : "rgba(0,0,0,0.54)" } )}><span>&#60;</span>
                 </button>
-
                 <Link to="/" style={linkStyle}><div style={{display : this.state.dsl}}>HOME</div></Link>
                 <Link to="/onezero" style={linkStyle}><div>ONEZERO</div></Link>
                 <Link to="/elemental" style={linkStyle}><div>ELEMENTAL</div></Link>
@@ -151,7 +139,6 @@ class Content extends Component{
                 <Link to="/marker" style={linkStyle}><div>MARKER</div></Link>
                 <Link to="/level" style={linkStyle}><div>LEVEL</div></Link>
                 <Link to="/heat" style={linkStyle}><div style={{display : this.state.dsr}}>HEAT</div></Link>                
-                
                 <button 
                     className="app-arrow-back-text"
                     style={{color:this.state.lbtnClr}}

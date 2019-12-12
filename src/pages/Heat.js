@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Register from './pages/Register';
 
-class App extends Component{
+class Heat extends Component{
   render(){
     return(
       <div className="app-body">
-          <Register/>
+        <h1>Heat Page</h1>
       </div>
     ); 
   }
 }
 
-export default App;
+export default Heat;

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Register from './pages/Register';
 
-class App extends Component{
+class Elemental extends Component{
   render(){
     return(
       <div className="app-body">
-          <Register/>
+        <h1>Elemental Page</h1>
       </div>
     ); 
   }
 }
 
-export default App;
+export default Elemental;

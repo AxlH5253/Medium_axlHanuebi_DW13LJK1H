@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Register from './pages/Register';
 
-class App extends Component{
+class Forge extends Component{
   render(){
     return(
       <div className="app-body">
-          <Register/>
+        <h1>Forge Page</h1>
       </div>
     ); 
   }
 }
 
-export default App;
+export default Forge;
