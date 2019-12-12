@@ -46,6 +46,16 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     backgroundColor: '#8934eb',
   },
+
+  contentRight: {
+    color: 'rgba(0,0,0,0.74)',
+    display: 'flex',
+    width: '50%',
+    flexDirection:'coloumn',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+
   cover: {
     width: "100%",
     height: "450px",
@@ -73,26 +83,90 @@ function SideCardLeft() {
   );
 }
 
+function SideCardRight() {
+  const classes = useStyles();
+  const theme = useTheme();
+
+  return (
+    <Card className={classes.cardSide}>
+      <CardContent className={classes.contentRight}>
+        <Typography component="h5" variant="h2">
+          <div class="app-onezero-font" style={{fontSize:'40px',width:'93%'}}>Uber Delivery Worker Track Thieves Trough a Secret Network</div>
+        </Typography>
+      </CardContent>
+      <CardMedia
+        className={classes.cover}
+        image="https://miro.medium.com/max/1512/1*TBVJ41WGvXQMDZTLhl0RbA.jpeg"
+        title="Live from space album cover"
+      />
+    </Card>
+  );
+}
+
+function CardAnimation() {
+  const classes = useStyles();
+  const theme = useTheme();
+
+  return (
+    <Card className={classes.cardSide}>
+      <CardMedia
+        className={classes.cover}
+        image="https://gifimage.net/wp-content/uploads/2017/09/background-gif-tumblr-rain-9.gif"
+        title="Live from space album cover"
+      />
+    </Card>
+  );
+}
  export default function OneZero() {
     
   const classes = useStyles();
 
   return (
   <div className={classes.root}>
-      <div className="app-onzero-headline">
+      <div className="app-onezero-headline">
          <img className="app-onzero-icon" src='https://miro.medium.com/max/400/1*cw32fIqCbRWzwJaoQw6BUg.png'/>
          <div class="app-onezero-font"><span style={{color:"#8934eb"}}>The front lines of the future.</span> A Medium publication about tech and science.</div>
+         <button className="app-follow-btn-onezero">Follow</button>
       </div>
       <Grid container spacing={3} style={{ borderBottom: "1px solid #dae3dc", paddingBottom: "20px"}}>
         <Grid item xs={12}>
           <Paper className={classes.paper}><SideCardLeft/></Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><SideCardLeft/></Paper>
+          <Paper className={classes.paper}>< CardAnimation/></Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><SideCardLeft/></Paper>
+          <Paper className={classes.paper}><SideCardRight/></Paper>
         </Grid>
+        <div className="app-article-body" style={{width:"100%"}}>
+          <div className="app-article-title">Keep Your Home Screen Orginized</div>
+          <div className="app-article-content">
+            <p>
+              So how did the classical Latin become so incoherent? According to McClintock, 
+              a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to 
+              provide placeholder text to mockup various fonts for a type specimen book.
+            </p>
+
+            <p>
+              It's difficult to find examples of lorem ipsum in use before Letraset 
+              made it popular as a dummy text in the 1960s, 
+              although McClintock says he remembers coming across the lorem ipsum passage in 
+              a book of old metal type samples. So far he hasn't relocated where he once saw the passage, 
+              but the popularity of Cicero in the 15th century supports the theory that the filler text has 
+              been used for centuries.
+            </p>
+
+            <p>
+              It's difficult to find examples of lorem ipsum in use before Letraset 
+              made it popular as a dummy text in the 1960s, 
+              although McClintock says he remembers coming across the lorem ipsum passage in 
+              a book of old metal type samples. So far he hasn't relocated where he once saw the passage, 
+              but the popularity of Cicero in the 15th century supports the theory that the filler text has 
+              been used for centuries.
+            </p>
+
+        </div>
+        </div>
       </Grid>
   </div>
   );

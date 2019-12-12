@@ -144,11 +144,12 @@ h2{
   border: none;
 }
 
-.app-onzero-headline{
+.app-onezero-headline{
   display: flex;
-  align-content: center;
+  align-items: center;
   margin:50px 0px 50px 0px;
   font-family: 'yellix';
+  justify-content: "space-between";
 }
 
 .app-onezero-font{
@@ -240,6 +241,17 @@ h2{
   border: 2px solid #89e88a;
   color: #89e88a;
   border-radius: 5px;
+}
+
+.app-follow-btn-onezero{
+  background: #fff;
+  width: 80px;
+  height: 35px;
+  font-size: 15px;
+  border: 1px solid #8934eb;
+  color: #8934eb;
+  border-radius: 5px;
+  margin-left: 350px;
 }
 
 .app-category div:hover{
