@@ -15,6 +15,7 @@ import Heat from './pages/Heat';
 import ArticleDetail from './pages/ArticleDetail';
 import Category from './pages/Category';
 import Follow from './pages/follow';
+import Comment from './pages/Coment';
 
 import './App.css';
 
@@ -111,6 +112,12 @@ import {
           <Route path="/follow">
             <div className="app-body">
               <Follow/>
+            </div>
+          </Route>
+          <Route path="/comment">
+            <div className="app-body">
+              <Header/>
+              <Comment/>
             </div>
           </Route>
           <Route path="/">

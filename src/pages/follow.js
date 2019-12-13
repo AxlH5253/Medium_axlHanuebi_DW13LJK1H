@@ -5,6 +5,12 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import { Link } from "react-router-dom";
+
+const linkStyle = {
+  textDecoration : 'none',
+  color : 'rgba(0,0,0,0.54)'
+}
 
 export default function Follow() {
     return (
@@ -65,10 +71,12 @@ export default function Follow() {
           </div>
 
           <div className="app-follow-response-btn">
+            <Link to="/comment" style={linkStyle}>
             <button className="app-follow-btn" 
               style={{width:'100%',height:'100%', borderRadius: '10px', fontSize:'20px'}}>
                 See Response (216)
             </button>
+            </Link>
           </div>
 
       </div>
