@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Register from './pages/Register';
 import Login from './pages/Login';
-import Header from './pages/Header';
+import Header from './components/Header';
 import Home from './pages/Home';
 import OneZero from './pages/Onezero';
 import Elemental from './pages/Elemental';
@@ -14,8 +14,9 @@ import Level from './pages/Level';
 import Heat from './pages/Heat';
 import ArticleDetail from './pages/ArticleDetail';
 import Category from './pages/Category';
-import Follow from './pages/follow';
+import Follow from './components/follow';
 import Comment from './pages/Coment';
+import RelatedArticle from './pages/RelatedArticle'; 
 
 import './App.css';
 
@@ -95,6 +96,8 @@ import {
           <Route path="/articledetail">
             <div className="app-body">
               <ArticleDetail/>
+              <Follow/>
+              <RelatedArticle/>
             </div>
           </Route>
           <Route path="/home">
@@ -107,11 +110,6 @@ import {
           <Route path="/login">
             <div className="app-body">
               <Login/>
-            </div>
-          </Route>
-          <Route path="/follow">
-            <div className="app-body">
-              <Follow/>
             </div>
           </Route>
           <Route path="/comment">

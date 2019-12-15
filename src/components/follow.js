@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
 import Avatar from '@material-ui/core/Avatar';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -42,8 +42,8 @@ export default function Follow() {
               </div>
               <div className="app-about-author">
                 <div style={{fontSize: '15px'}}>Writen by</div>
-                <div style={{color: 'rgba(0, 0, 0, 0.84)'}}>Ryan Holiday</div>
-                <div style={{fontSize: '18px'}}>
+                <div style={{color: 'rgba(0, 0, 0, 0.84)', fontSize:'20px'}}>Ryan Holiday</div>
+                <div style={{fontSize: '16px'}}>
                     Bestselling author of ‘Conspiracy,’ ‘Ego is the Enemy’ & 
                     ‘The Obstacle Is The Way’ http://amzn.to/24qKRWR
                 </div>
@@ -59,8 +59,8 @@ export default function Follow() {
                 src="https://miro.medium.com/fit/c/160/160/1*kFWwYehzjJIhgw8hTygfHw.png" />
               </div>
               <div className="app-about-author">
-                <div style={{color: 'rgba(0, 0, 0, 0.84)'}}>Mission.org</div>
-                <div style={{fontSize: '18px'}}>
+                <div style={{color: 'rgba(0, 0, 0, 0.84)', fontSize:'20px'}}>Mission.org</div>
+                <div style={{fontSize: '16px'}}>
                   A network of business & 
                   tech podcasts designed to accelerate learning. Selected as “Best of 2018” by Apple. Mission.org
                 </div>
@@ -73,7 +73,7 @@ export default function Follow() {
           <div className="app-follow-response-btn">
             <Link to="/comment" style={linkStyle}>
             <button className="app-follow-btn" 
-              style={{width:'100%',height:'100%', borderRadius: '10px', fontSize:'20px'}}>
+              style={{width:'100%',height:'80%', borderRadius: '10px', fontSize:'20px'}}>
                 See Response (216)
             </button>
             </Link>

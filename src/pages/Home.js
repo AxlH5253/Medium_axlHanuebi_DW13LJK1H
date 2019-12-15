@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { makeStyles, useTheme  } from '@material-ui/core/styles';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import Card from '@material-ui/core/Card';
@@ -8,14 +8,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import ArticleDetail from './ArticleDetail';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const linkStyle = {
   textDecoration : 'none',
@@ -28,18 +22,18 @@ const linkStyle = {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3} style={{ borderBottom: "1px solid #dae3dc", padding: "20px"}}>
+      <Grid container spacing={1} style={{ borderBottom: "1px solid #dae3dc", padding: "20px"}}>
         
+        <Grid item xs={4}>
         <Link to="/articledetail" style={linkStyle}>
-          <Grid item xs>
-            <Paper className={classes.paper}><MediaCard/></Paper>
-          </Grid>
-        </Link>
-
-        <Grid item xs>
-          <Paper className={classes.paper}><MediaCardTo/></Paper>
+          <Paper className={classes.paper}><MediaCard/></Paper>
+          </Link>
         </Grid>
-        <Grid item xs>
+        
+        <Grid item xs={4}>
+          <Paper className={classes.paper}><MediaCard/></Paper>
+        </Grid>
+        <Grid item xs={4}>
         <React.Fragment>
           <Grid item xs>
             <Paper className={classes.paper}><SideCardLeft/></Paper>
@@ -54,7 +48,7 @@ const linkStyle = {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3} style={{ borderBottom: "1px solid #dae3dc", padding: "20px"}}>
+      <Grid container spacing={1} style={{ borderBottom: "1px solid #dae3dc", padding: "20px"}}>
         <Grid item xs={8}>
         <React.Fragment>
           <Grid item xs>
@@ -87,6 +81,7 @@ const linkStyle = {
           </Grid>
       </Grid>
   </div>
+
   );
 }
   
@@ -101,17 +96,17 @@ const linkStyle = {
           component="img"
           alt="Contemplative Reptile"
           height="140"
-          image="https://wallpapercave.com/wp/wp2670849.jpg"
+          image="https://www.bing.com/th?id=OIP.k3wXRb02tiGhVxJUHX6HiwHaE8&pid=Api&rs=1"
           title="Contemplative Reptile"
         />
          <div className={classes.details}>
         <CardContent className={classes.content}>
-          <h1 gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h6">
             Russia Collected Its Dues From Trump This Year
-          </h1>
+          </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Foreign Minister Sergei Lavrov’s visit to Washington may as well be a 
-            victory lap: U.S. foreign policy is serving Moscow’s interests now.
+            victory lap: U.S.
           </Typography>
         </CardContent>
         </div>
@@ -120,38 +115,9 @@ const linkStyle = {
     );
   }
 
-  function MediaCardTo() {
-    const classes = useStyles();
-  
-    return (
-      <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.image} 
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image="https://www.hdwallpapers.in/download/world_of_warplanes-1366x768.jpg"
-          title="Contemplative Reptile"
-        />
-         <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <h1 gutterBottom variant="h5" component="h2">
-            Let’s Strip Away the President’s Only Asset — His Name Brand
-          </h1>
-          <Typography variant="body2" color="textSecondary" component="p">
-          It’s time to declare the T-word a profanity
-          </Typography>
-        </CardContent>
-        </div>
-      </CardActionArea>
-    </Card>
-    );
-  }
 
 function SideCardLeft() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSide}>
@@ -162,7 +128,7 @@ function SideCardLeft() {
         />
         <div className={classes.details}>
           <CardContent className={classes.content}>
-            <Typography component="h5" variant="h5">
+            <Typography component="h5" variant="h6">
               Spotify’s Year-End Lists Are the Ultimate Personality Test
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
@@ -176,7 +142,6 @@ function SideCardLeft() {
 
   function SideCardLeftNd() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSide}>
@@ -201,7 +166,6 @@ function SideCardLeft() {
 
   function SideCardLeftRd() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSide}>
@@ -226,7 +190,6 @@ function SideCardLeft() {
 
   function SideCardRight() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <>
@@ -254,7 +217,6 @@ function SideCardLeft() {
 
   function SideCardRightNd() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSideRight}>
@@ -283,7 +245,6 @@ function SideCardLeft() {
 
   function SideCardRightRd() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSideRight}>
@@ -312,7 +273,6 @@ function SideCardLeft() {
 
   function SideCardNoImage() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSide}>
@@ -338,7 +298,6 @@ function SideCardLeft() {
 
   function SideCardNoImageNd() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSide}>
@@ -363,7 +322,6 @@ function SideCardLeft() {
 
   function SideCardNoImageRd() {
     const classes = useStyles();
-    const theme = useTheme();
   
     return (
       <Card className={classes.cardSide}>
@@ -390,6 +348,7 @@ function SideCardLeft() {
   const useStyles = makeStyles(theme => ({
     root: {
       width: "90%",
+      height: '60%',
       flexGrow: 1,
     },
     paper: {
@@ -402,7 +361,6 @@ function SideCardLeft() {
     card: {
       maxWidth: 600,
       height: "100%",
-      boxShadow: "none",
       margin: "0!important",
       padding: "0!important",
       border: "0!important",
@@ -416,8 +374,6 @@ function SideCardLeft() {
       margin: "0!important",
       padding: "0!important",
       border: "0!important",
-      boxShadow: "none!important",
-  
     },
   
     cardSideRight:{
@@ -427,7 +383,7 @@ function SideCardLeft() {
       margin: "0!important",
       padding: "0!important",
       border: "0!important",
-      boxShadow: "none!important",
+
     },
   
     details: {
@@ -449,7 +405,7 @@ function SideCardLeft() {
   
     content: {
       flex: '1 0 auto',
-      width: '100%',
+      width: '90%',
     },
     cover: {
       width: "25%",

@@ -27,7 +27,7 @@ onSubmit = event => {
 };
 
 addData = event => {
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
         if (document.getElementById("comment-textarea").value !== "") {
             this.onSubmit();
             document.getElementById("comment-textarea").value = "";

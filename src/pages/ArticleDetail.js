@@ -4,14 +4,14 @@ import SearchSharpIcon from '@material-ui/icons/SearchSharp';
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
 import Avatar from '@material-ui/core/Avatar';
 import {Link} from "react-router-dom";
-import Follow from './follow';
 
 class ArticleDetail extends Component{
   render(){
     return(
-      <div className="app-body">
+      <>
+          <Header/>
           <Content/>
-      </div>
+      </>
     ); 
   }
 }
@@ -24,26 +24,12 @@ const linkStyle = {
 class Content extends Component{
   render(){
     return(
-      <>
-      <div className="app-article-header">
-        <Link to="/home" style={linkStyle}>
-          <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
-          </img>
-        </Link>
-        <div className="app-header-div">
-          <div><SearchSharpIcon></SearchSharpIcon></div>
-          <div><NotificationsNoneOutlinedIcon ></NotificationsNoneOutlinedIcon ></div>
-          <div><Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" /></div>
-        </div>
-      </div>
-      
-      <div className="app-article-subheader">
-        <img className="app-mision-icon" src="https://miro.medium.com/max/432/1*IPEsgX_bZKP_7OubdnI7-Q.png"></img>
-        <div className="app-article-subheader-text">MISION ORIGINAL | SUBSCRIBE</div>
-      </div>
-
+      <>      
       <div className="app-article-body">
+        
+        
         <img style={{width:"87%"}} src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"></img>
+        
         <div className="app-article-title">If You Only Read A Few Book In 2018, Read These</div>
         <div className="app-article-author">
           <Avatar style={{margin:"10px 10px 10px 0px"}} alt="Remy Sharp" src="https://miro.medium.com/fit/c/96/96/0*oxw8NBp_Td0n3l4_.png" />
@@ -81,10 +67,34 @@ class Content extends Component{
             </p>
 
         </div>
-        <Follow/>
       </div>
       </>
     )
+  }
+}
+
+class Header extends Component{
+  render(){
+  return(
+    <div style={{width:'99.7%'}}>
+    <div className="app-article-header">
+      <Link to="/home" style={linkStyle}>
+      <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
+      </img>
+      </Link>
+    <div className="app-header-div">
+      <div><SearchSharpIcon></SearchSharpIcon></div>
+      <div><NotificationsNoneOutlinedIcon ></NotificationsNoneOutlinedIcon ></div>
+      <div><Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" /></div>
+      </div>
+    </div>
+
+    <div className="app-article-subheader">
+      <img className="app-mision-icon" src="https://miro.medium.com/max/432/1*IPEsgX_bZKP_7OubdnI7-Q.png"></img>
+      <div className="app-article-subheader-text">MISION ORIGINAL | SUBSCRIBE</div>
+    </div>
+    </div>
+  )
   }
 }
 

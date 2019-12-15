@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ButtonPrimary from '../components/ButtonPrimary';
 import ButtonClear from '../components/ButtonClear';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 import {
   Link
@@ -12,7 +14,7 @@ class Login extends Component{
 
   render(){
     return(
-      <div className="app-body">
+      <div style={{width:'100%', height:'100vh', display:'flex',alignItems:'center',justifyContent:'center'}}>
         <div className="app-content-login">
           <h1>Sign In with email</h1>
           <h2>
@@ -28,6 +30,15 @@ class Login extends Component{
 }
 
 class FormInput extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+        showEye1: 'inline',
+        showEye2: 'none',
+        hidepass: 'password'
+      }
+  }
+
   render(){
     return(
     <div className="app-form">
@@ -38,7 +49,17 @@ class FormInput extends Component{
 
       <div className="app-input-group"> 
         <div className ="input-label">Your password</div>
-        <input type="password" />
+        <input className="app-inputpass" type={this.state.hidepass} />
+        <VisibilityOffIcon 
+          fontSize="small"
+          onClick={()=> this.setState({showEye1:"none", showEye2: "inline",hidepass: 'text'} )}
+          style={{display:this.state.showEye1}}
+        />
+        <VisibilityIcon 
+          fontSize="small"
+          onClick={()=> this.setState({showEye1:"inline", showEye2: "none",hidepass: 'password'} )}
+          style={{display:this.state.showEye2}}
+        />
       </div>
 
       <Link to="/home" style={{textDecoration: "none"}}><ButtonPrimary title="Continue"></ButtonPrimary></Link>

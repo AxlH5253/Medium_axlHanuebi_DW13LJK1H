@@ -7,8 +7,8 @@ h1{
 }
 
 h2{
-  font-size: 19px;
-  color: rgba(0, 0, 0, 0.76);
+  font-size: 15px;
+  color: rgba(156, 146, 146, 0.76);
   font-weight: normal;
   text-align: center;
   width: 30%;
@@ -21,7 +21,7 @@ h2{
 
 .app-body {
   background-color: white;
-  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,13 +40,13 @@ h2{
 }
 
 .app-content-register{
-  width: 80vw;
-  height: 80vh;
+  width: 80%;
+  height: 80%;
 }
 
 .app-content-login{
-  width: 70vw;
-  height: 70vh;
+  width: 80%;
+  height: 80%;
 }
 
 .app-content-register, .app-content-login{
@@ -73,7 +73,7 @@ h2{
 }
 
 .app-text-info{
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.76);
   font-weight: normal;
   text-align: center;
@@ -82,11 +82,11 @@ h2{
 }
 
 .app-form input{
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .app-form button{
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 .app-input-group{
@@ -94,19 +94,28 @@ h2{
   color: rgba(0, 0, 0, 0.54);
 }
 
-.app-input-group input{
+.app-input-group input, .app-inputpass{
   border: 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
-  padding-top: 5px;
-  width: 350px;
+  padding-top: 3px;
+  width: 290px;
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 17px;
+}
+
+.app-inputpass{
+  width: 270px !important;
 }
 
 .app-input-group .input-label{
   margin-top: 20px;
   margin-bottom: 0px;
   font-weight: normal;
+  font-size: 12px;
+}
+
+.input-label{
+  margin-top: 30px;
 }
 
 .app-arrow-back-text{
@@ -158,12 +167,17 @@ h2{
   width: 40%;
 }
 
+.app-article{
+  width: 100%;
+}
+
 .app-article-body{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   margin-top: 40px;
+  width: 100%;
 }
 
 .app-comment-body{
@@ -331,8 +345,8 @@ h2{
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%
 }
 
@@ -372,7 +386,6 @@ h2{
 }
 
 input:focus{
-  padding: 20px;
   outline: none;
   border-bottom: 2px solid black;
 }
@@ -522,6 +535,7 @@ input:focus{
   width : 100px;
   background: #fff;
   border-radius: 0%;
+  border-top: 1px solid #c6ccc8;
 }
 
 .app-author-avatar-comment-other-user div{
@@ -542,6 +556,25 @@ input:focus{
 
 .app-comment-input:focus{
   outline:none;
+}
+
+.app-related-article-body, .app-related-article-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #f7f7f7;
+}
+
+.app-related-article-child{
+  width: 95%
+}
+
+.app-related-article-panel{
+  width:'100%' !important; 
+  height:'50px' !important; 
+  background-color:'red' !important;
 }
 
 @font-face {
