@@ -577,6 +577,31 @@ input:focus{
   background-color:'red' !important;
 }
 
+.app-dropdown-profil{
+  position: relative;
+  display: inline-block;
+}
+
+.app-dropdown-profil-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 197px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding:20px;
+}
+
+.app-dropdown-profil-content ul{
+  list-style-type: none;
+  border-top: 1px solid #edebe6;
+}
+
+.app-dropdown-profil-content li{
+  padding: 10px !important;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "noeDisplay";
   src: url("https://glyph.medium.com/font/b6752aa/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/noe-display-500-normal.woff") format('woff');

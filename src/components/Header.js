@@ -26,6 +26,19 @@ const linkStyle = {
 }
 
 class HeaderClass extends Component{
+    constructor(props){
+        super(props);
+        this.state = { showMenu: 'none'}
+    }
+
+    onclick = event => {
+        if(this.state.showMenu == 'none'){
+            this.setState({ showMenu : 'block'});
+        }else{
+            this.setState({ showMenu : 'none'});
+        }
+        
+    };
 
     render(){
        
@@ -33,15 +46,50 @@ class HeaderClass extends Component{
             <>
             <div position="static" style={header}>
                 <Link to="/home" style={linkStyle}><h1 style={{fontWeight:"bold",marginLeft:"20px"}}>Medium</h1></Link>
-                <div className="app-header-div">
-                    <div><SearchSharpIcon></SearchSharpIcon></div>
-                    <div><NotificationsNoneOutlinedIcon ></NotificationsNoneOutlinedIcon ></div>
-                    <div><Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" /></div>
+                <div> 
+                    <div className="app-header-div">
+                        <div><SearchSharpIcon></SearchSharpIcon></div>
+                        <div><NotificationsNoneOutlinedIcon ></NotificationsNoneOutlinedIcon ></div>
+                        <Avatar 
+                            className="app-dropdown-profil" alt="Remy Sharp" src="/static/images/avatar/1.jpg"
+                            onClick={this.onclick}
+                        />
+                    </div>
+                    <div style={{display: this.state.showMenu}}>
+                        <MenuProfil/>
+                    </div>
                 </div>
             </div>
             </>
         );
     }
+}
+
+function MenuProfil(){
+    return(
+    <>
+      <div className="app-dropdown-profil-content">
+        <div style={{display:'flex'}}>
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"/>
+            <div style={{marginLeft:'10px',display:'flex',flexDirection:'column'}}>
+                <h7>Ronaldo Wati</h7>
+                <h7>@ronaldowati</h7>
+            </div>
+        </div>
+        <ul>
+            <Link to="/newstory" style={linkStyle}><li> New Stories</li></Link>
+            <Link to="/story" style={linkStyle}><li>Story</li></Link>
+        </ul>
+        <ul>
+            <Link to="/bookmarks" style={linkStyle}><li>Bookmarks</li></Link>
+            <Link to="/profile" style={linkStyle}><li>Profile</li></Link>
+            <Link to="/home" style={linkStyle}><li>Setings</li></Link>
+            <Link to="/home" style={linkStyle}><li>Help</li></Link>
+            <Link to="/login" style={linkStyle}><li>Sign Out</li></Link>
+        </ul>
+      </div>
+    </>
+    )
 }
 
 export default HeaderClass

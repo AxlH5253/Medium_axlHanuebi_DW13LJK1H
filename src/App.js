@@ -17,6 +17,11 @@ import Category from './pages/Category';
 import Follow from './components/follow';
 import Comment from './pages/Coment';
 import RelatedArticle from './pages/RelatedArticle'; 
+import Story from './pages/Story';
+import NewStory from './pages/NewStory';
+import Stats from './pages/Stats';
+import Profile from './pages/Profile'
+import Bookmarks from './pages/Bookmarks';
 
 import './App.css';
 
@@ -116,6 +121,31 @@ import {
             <div className="app-body">
               <Header/>
               <Comment/>
+            </div>
+          </Route>
+          <Route path="/story">
+            <div className="app-body">
+              <Story/>
+            </div>
+          </Route>
+          <Route path="/newstory">
+            <div className="app-body">
+              <NewStory/>
+            </div>
+          </Route>
+          <Route path="/stats">
+            <div className="app-body">
+              <Stats/>
+            </div>
+          </Route>
+          <Route path="/profile">
+            <div className="app-body">
+              <Profile/>
+            </div>
+          </Route>
+          <Route path="/bookmarks">
+            <div className="app-body">
+              <Bookmarks/>
             </div>
           </Route>
           <Route path="/">
