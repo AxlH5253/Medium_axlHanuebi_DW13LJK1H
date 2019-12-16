@@ -602,6 +602,60 @@ input:focus{
   cursor: pointer;
 }
 
+.app-new-story-header{
+  display: flex;
+  background: #fff;
+  width: 80%;
+  height: 65px;
+}
+
+.publish-button{
+  color:white;
+  background:#32a873;
+  border: 1px solid #32a873;
+  border-color: #32a873;
+  width: 70px;
+  height: 25px;
+  border-radius: 10%;
+}
+
+.button:after {
+  border: 0px;
+}
+
+.app-new-story-input,.app-new-story-input-title, .app-new-story-input-content{
+  width: 100%;
+  display: flex;
+}
+
+.app-new-story-input{
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-new-story-input-title, .app-new-story-input-content{
+  justify-content: center;
+  padding-top: 18px;
+}
+
+.app-new-story-input-content{
+  padding-top: 10px;
+}
+
+.app-new-story-input-title input{
+  width: 60%;
+  height: 50px; 
+  font-size: 30px;
+  border: none
+}
+
+.app-new-story-input-content input{
+  width: 58%;
+  height: 25px;
+  font-size: 15px;
+  border: none;
+}
+
 @font-face {
   font-family: "noeDisplay";
   src: url("https://glyph.medium.com/font/b6752aa/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/noe-display-500-normal.woff") format('woff');
