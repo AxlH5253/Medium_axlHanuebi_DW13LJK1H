@@ -77,8 +77,8 @@ function MenuProfil(){
             </div>
         </div>
         <ul>
-            <Link to="/newstory" style={linkStyle}><li> New Stories</li></Link>
-            <Link to="/story" style={linkStyle}><li>Story</li></Link>
+            <Link to="/newstory" style={linkStyle}><li> New Story</li></Link>
+            <Link to="/storydraft" style={linkStyle}><li>Stories</li></Link>
         </ul>
         <ul>
             <Link to="/bookmarks" style={linkStyle}><li>Bookmarks</li></Link>

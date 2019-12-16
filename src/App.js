@@ -22,6 +22,8 @@ import NewStory from './pages/NewStory';
 import Stats from './pages/Stats';
 import Profile from './pages/Profile'
 import Bookmarks from './pages/Bookmarks';
+import StoryPublish from './components/StoryPublish';
+import StoryDraft from './components/StoryDraft';
 
 import './App.css';
 
@@ -123,11 +125,6 @@ import {
               <Comment/>
             </div>
           </Route>
-          <Route path="/story">
-            <div className="app-body">
-              <Story/>
-            </div>
-          </Route>
           <Route path="/newstory">
             <div className="app-body">
               <NewStory/>
@@ -146,6 +143,18 @@ import {
           <Route path="/bookmarks">
             <div className="app-body">
               <Bookmarks/>
+            </div>
+          </Route>
+          <Route path="/storypublish">
+            <div className="app-body">
+              <Story/>
+              <StoryPublish/>
+            </div>
+          </Route>
+          <Route path="/storydraft">
+            <div className="app-body">
+              <Story/>
+              <StoryDraft/>
             </div>
           </Route>
           <Route path="/">

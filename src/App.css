@@ -656,6 +656,33 @@ input:focus{
   border: none;
 }
 
+.app-story-body-top{
+  display: flex; 
+  align-items: center; 
+  width: 82%;
+  height: 150px;
+  justify-content: center
+}
+
+.app-story-body-top-title{
+  font-family: sans-serif;
+  font-weight: 750;
+}
+
+.app-story-body-top-button-box{
+  width: 50%; 
+  display: flex ; 
+  align-items: center; 
+  justify-content: flex-end;
+}
+
+.app-story-body-bottom{
+  height: 20px;
+  width: 82%;
+  border-bottom: 1px solid #adb3b2;
+  display: flex;
+}
+
 @font-face {
   font-family: "noeDisplay";
   src: url("https://glyph.medium.com/font/b6752aa/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/noe-display-500-normal.woff") format('woff');
