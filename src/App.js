@@ -138,6 +138,7 @@ import {
           </Route>
           <Route path="/profile">
             <div className="app-body">
+              <Header/>
               <Profile/>
             </div>
           </Route>
