@@ -72,13 +72,14 @@ function MenuProfil(){
         <div style={{display:'flex'}}>
             <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"/>
             <div style={{marginLeft:'10px',display:'flex',flexDirection:'column'}}>
-                <h7>Ronaldo Wati</h7>
-                <h7>@ronaldowati</h7>
+                Ronaldo Wati
+                @ronaldowati
             </div>
         </div>
         <ul>
             <Link to="/newstory" style={linkStyle}><li> New Story</li></Link>
             <Link to="/storydraft" style={linkStyle}><li>Stories</li></Link>
+            <Link to="/stats" style={linkStyle}><li>Stats</li></Link>
         </ul>
         <ul>
             <Link to="/bookmarks" style={linkStyle}><li>Bookmarks</li></Link>

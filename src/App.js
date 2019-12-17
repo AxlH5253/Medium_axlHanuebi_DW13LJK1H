@@ -132,6 +132,7 @@ import {
           </Route>
           <Route path="/stats">
             <div className="app-body">
+              <Header/>
               <Stats/>
             </div>
           </Route>
@@ -147,12 +148,14 @@ import {
           </Route>
           <Route path="/storypublish">
             <div className="app-body">
+              <Header/>
               <Story/>
               <StoryPublish/>
             </div>
           </Route>
           <Route path="/storydraft">
             <div className="app-body">
+              <Header/>
               <Story/>
               <StoryDraft/>
             </div>
