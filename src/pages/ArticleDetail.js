@@ -32,10 +32,14 @@ class Content extends Component{
         
         <div className="app-article-title">If You Only Read A Few Book In 2018, Read These</div>
         <div className="app-article-author">
-          <Avatar style={{margin:"10px 10px 10px 0px"}} alt="Remy Sharp" src="https://miro.medium.com/fit/c/96/96/0*oxw8NBp_Td0n3l4_.png" />
+            <Link to="/articlebyperson" style={linkStyle}>
+              <Avatar style={{margin:"10px 10px 10px 0px"}} alt="Remy Sharp" src="https://miro.medium.com/fit/c/96/96/0*oxw8NBp_Td0n3l4_.png" />
+            </Link>
             <div style={{display:"flex", flexDirection:"column"}}>
               <div style={{display:"flex"}}>
-                <div className="app-article-author-name">Ryan Holiday</div>
+                <div className="app-article-author-name">
+                <Link to="/articlebyperson" style={linkStyle}>Ryan Holiday </Link>
+                </div>
                 <button className="app-follow-btn">Follow</button>
               </div>
               <div className="app-article-date-post">Jun 26, 2018. 10 min read</div>

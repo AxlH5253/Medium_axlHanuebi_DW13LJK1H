@@ -24,6 +24,7 @@ import Profile from './pages/Profile'
 import Bookmarks from './pages/Bookmarks';
 import StoryPublish from './components/StoryPublish';
 import StoryDraft from './components/StoryDraft';
+import ArticleByPerson from './pages/ArticleByPerson';
 
 import './App.css';
 
@@ -160,6 +161,12 @@ import {
               <Header/>
               <Story/>
               <StoryDraft/>
+            </div>
+          </Route>
+          <Route path="/articlebyperson">
+            <div className="app-body">
+              <Header/>
+              <ArticleByPerson/>
             </div>
           </Route>
           <Route path="/">
