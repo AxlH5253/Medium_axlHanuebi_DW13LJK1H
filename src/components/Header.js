@@ -9,20 +9,20 @@ import {Link} from "react-router-dom";
 
 const header = {
     display: "flex",
-    width: "85%",
     fontStyle: "normal",
     backgroundColor: "#fff",
     color: "rgba(0,0,0,0.54)",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "right",
-    boxShadow: "none",
-    zIndex: "500"
+    zIndex: "500",
+    width:'85%',
+    height:'90px'
 };
 
 const linkStyle = {
     textDecoration : 'none',
-    color : 'rgba(0,0,0,0.54)'
+    color : 'rgba(0,0,0,0.54)',
 }
 
 class HeaderClass extends Component{
@@ -43,7 +43,7 @@ class HeaderClass extends Component{
     render(){
        
         return(
-            <>
+            <div style={{boxShadow:'0 4px 2px -2px #f2f0eb',width:'100%',height:'100px', display:'flex',justifyContent:'center'}}>
             <div position="static" style={header}>
                 <Link to="/home" style={linkStyle}><h1 style={{fontWeight:"bold",marginLeft:"20px"}}>Medium</h1></Link>
                 <div> 
@@ -60,7 +60,7 @@ class HeaderClass extends Component{
                     </div>
                 </div>
             </div>
-            </>
+            </div>
         );
     }
 }

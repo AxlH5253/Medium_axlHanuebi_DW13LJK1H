@@ -143,6 +143,7 @@ import {
           </Route>
           <Route path="/bookmarks">
             <div className="app-body">
+              <Header/>
               <Bookmarks/>
             </div>
           </Route>
