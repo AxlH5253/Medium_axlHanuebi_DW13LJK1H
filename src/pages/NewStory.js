@@ -21,8 +21,8 @@ class Header extends Component{
   return(
     <div style={{width:'99.7%', display:'flex',justifyContent:'center'}}>
     <div className="app-new-story-header">
-      <Link to="/home" style={linkStyle}>
-      <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
+      <Link to="/" style={linkStyle}>
+      <img className="app-medium-icon" alt="Remy Sharp" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
       </img>
       </Link>
       <div className="app-header-div">

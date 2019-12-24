@@ -32,7 +32,7 @@ class HeaderClass extends Component{
     }
 
     onclick = event => {
-        if(this.state.showMenu == 'none'){
+        if(this.state.showMenu === 'none'){
             this.setState({ showMenu : 'block'});
         }else{
             this.setState({ showMenu : 'none'});
@@ -45,7 +45,7 @@ class HeaderClass extends Component{
         return(
             <div style={{boxShadow:'0 4px 2px -2px #f2f0eb',width:'100%',height:'100px', display:'flex',justifyContent:'center'}}>
             <div position="static" style={header}>
-                <Link to="/home" style={linkStyle}><h1 style={{fontWeight:"bold",marginLeft:"20px"}}>Medium</h1></Link>
+                <Link to="/" style={linkStyle}><h1 style={{fontWeight:"bold",marginLeft:"20px"}}>Medium</h1></Link>
                 <div> 
                     <div className="app-header-div">
                         <div><SearchSharpIcon></SearchSharpIcon></div>
@@ -84,8 +84,8 @@ function MenuProfil(){
         <ul>
             <Link to="/bookmarks" style={linkStyle}><li>Bookmarks</li></Link>
             <Link to="/profile" style={linkStyle}><li>Profile</li></Link>
-            <Link to="/home" style={linkStyle}><li>Setings</li></Link>
-            <Link to="/home" style={linkStyle}><li>Help</li></Link>
+            <Link to="/" style={linkStyle}><li>Setings</li></Link>
+            <Link to="/" style={linkStyle}><li>Help</li></Link>
             <Link to="/login" style={linkStyle}><li>Sign Out</li></Link>
         </ul>
       </div>

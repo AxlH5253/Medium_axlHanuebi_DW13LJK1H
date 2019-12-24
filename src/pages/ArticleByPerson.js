@@ -56,7 +56,7 @@ function Article() {
             </div>
           </div>
           <div style={{display:'flex',justifyContent:'center', width:'100%',height:'65%'}}>
-            <img src='https://i.ytimg.com/vi/Hmo0sm4lCSk/maxresdefault.jpg' style={{width:'95%',height:'100%'}}></img>
+            <img alt="Remy Sharp" src='https://i.ytimg.com/vi/Hmo0sm4lCSk/maxresdefault.jpg' style={{width:'95%',height:'100%'}}></img>
           </div>
             <h1 style={{paddingLeft:'20px',color:'rgba(0,0,0,0.94)'}}>
                 How To Recover When The World Breaks You

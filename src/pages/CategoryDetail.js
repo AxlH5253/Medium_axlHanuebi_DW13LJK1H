@@ -21,8 +21,8 @@ import {Link} from "react-router-dom";
   return (
   <>
   <div className="app-article-header" style={{width:'99.7%'}}>
-    <Link to="/home" style={linkStyle}>
-      <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
+    <Link to="/" style={linkStyle}>
+      <img className="app-medium-icon" alt="Remy Sharp" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
       </img>
     </Link>
     <div className="app-header-div">
@@ -34,8 +34,8 @@ import {Link} from "react-router-dom";
 
   <div className={classes.root}>
       <div className="app-onezero-headline">
-         <img className="app-onzero-icon" src='https://miro.medium.com/max/400/1*cw32fIqCbRWzwJaoQw6BUg.png'/>
-         <div class="app-onezero-font"><span style={{color:"#8934eb"}}>The front lines of the future.</span> A Medium publication about tech and science.</div>
+         <img className="app-onzero-icon" alt="Remy Sharp" src='https://miro.medium.com/max/400/1*cw32fIqCbRWzwJaoQw6BUg.png'/>
+         <div className="app-onezero-font"><span style={{color:"#8934eb"}}>The front lines of the future.</span> A Medium publication about tech and science.</div>
          <button className="app-follow-btn-onezero">Follow</button>
       </div>
       <Grid container spacing={3} style={{ borderBottom: "1px solid #dae3dc", paddingBottom: "20px"}}>
@@ -88,7 +88,7 @@ function SideCardLeft() {
       />
         <CardContent className={classes.content}>
           <Typography component="h5" variant="h2">
-            <div class="app-onezero-font" style={{fontSize:'40px',width:'93%'}}>The Influencer and the Hit Man</div>
+            <div className="app-onezero-font" style={{fontSize:'40px',width:'93%'}}>The Influencer and the Hit Man</div>
           </Typography>
         </CardContent>
     </Card>
@@ -102,7 +102,7 @@ function SideCardRight() {
     <Card className={classes.cardSide}>
       <CardContent className={classes.contentRight}>
         <Typography component="h5" variant="h2">
-          <div class="app-onezero-font" style={{fontSize:'40px',width:'93%'}}>Uber Delivery Worker Track Thieves Trough a Secret Network</div>
+          <div className="app-onezero-font" style={{fontSize:'40px',width:'93%'}}>Uber Delivery Worker Track Thieves Trough a Secret Network</div>
         </Typography>
       </CardContent>
       <CardMedia

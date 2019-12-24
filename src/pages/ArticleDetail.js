@@ -28,7 +28,7 @@ class Content extends Component{
       <div className="app-article-body">
         
         
-        <img style={{width:"87%"}} src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"></img>
+        <img style={{width:"87%"}} alt="Remy Sharp" src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"></img>
         
         <div className="app-article-title">If You Only Read A Few Book In 2018, Read These</div>
         <div className="app-article-author">
@@ -82,8 +82,8 @@ class Header extends Component{
   return(
     <div style={{width:'99.7%'}}>
     <div className="app-article-header">
-      <Link to="/home" style={linkStyle}>
-      <img className="app-medium-icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
+      <Link to="/" style={linkStyle}>
+      <img className="app-medium-icon" alt="Remy Sharp" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png">
       </img>
       </Link>
     <div className="app-header-div">
@@ -94,7 +94,7 @@ class Header extends Component{
     </div>
 
     <div className="app-article-subheader">
-      <img className="app-mision-icon" src="https://miro.medium.com/max/432/1*IPEsgX_bZKP_7OubdnI7-Q.png"></img>
+      <img className="app-mision-icon" alt="Remy Sharp" src="https://miro.medium.com/max/432/1*IPEsgX_bZKP_7OubdnI7-Q.png"></img>
       <div className="app-article-subheader-text">MISION ORIGINAL | SUBSCRIBE</div>
     </div>
     </div>

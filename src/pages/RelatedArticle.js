@@ -181,7 +181,6 @@ function ContentCard() {
       alignItems: 'center',
       width:'98%', 
       height:'50px',
-      backgroundColor:'red',
       fontWeight: 'bold',
       paddingTop: '50px',
       borderBottom: '1px solid grey',
