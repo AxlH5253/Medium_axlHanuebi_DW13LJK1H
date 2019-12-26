@@ -683,6 +683,19 @@ input:focus{
   display: flex;
 }
 
+.app-home-login-btn{
+  display: flex;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  border: 1px solid black;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
 @font-face {
   font-family: "noeDisplay";
   src: url("https://glyph.medium.com/font/b6752aa/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/noe-display-500-normal.woff") format('woff');

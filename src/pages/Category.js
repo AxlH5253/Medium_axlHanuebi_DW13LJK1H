@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import {getCategories} from "../API/axios"
 
 const linkStyle = {
     textDecoration : 'none',
@@ -17,7 +18,7 @@ class Category extends Component{
     }
     
     componentDidMount() {
-        axios.get(`https://medium-back-end.herokuapp.com/api/v1/categories`)
+        axios.get(getCategories)
           .then(res => {
             const categories = res.data;
             this.setState({ categories });

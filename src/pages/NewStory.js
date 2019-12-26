@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import ImageIcon from '@material-ui/icons/Image';
 import Avatar from '@material-ui/core/Avatar';
 import {Link} from "react-router-dom";
 
@@ -37,19 +37,58 @@ class Header extends Component{
   }
 }
 
-function Content(){
+class Content extends Component{
+  constructor(props){
+    super(props);
+    this.state = { 
+        showImage: 'none',
+        showInput: 'none',
+        imgUrl:''
+    }
+  }
+
+  showInput = event =>{
+    if(this.state.showInput === 'none'){
+      this.setState({ showInput:'inline'})
+    }else{
+      this.setState({ showInput:'none'})
+    }
+  }
+
+  submitUrl = event =>{
+    if (event.keyCode === 13){
+      if(this.state.showImage === 'none'){
+        this.setState({ showImage:'inline',imgUrl:event.target.value})
+      }else{
+        this.setState({ showImage:'none',imgUrl:''})
+      }
+      event.target.value = '';
+    }
+  }
+
+  render(){
     return(
       <div className="app-new-story-input">
         <div className="app-new-story-input-title">
-           <AddCircleOutlineIcon style={{fontSize:'60px',visibility:'hidden'}} color='disabled'/>
           <input placeholder='Title'/>
         </div>
+        <div style={{display:'flex',alignItems:'center'}}>
+          <ImageIcon onClick={this.showInput} fontSize='large' color='disabled'/>
+          <input style={{display:this.state.showInput,width:'600px',height:'30px'}}
+           onKeyUp={this.submitUrl}
+          />
+        </div>
+        <div style={{ border:'1px solid grey' ,width:'700px',height:'300px',display:this.state.showImage}}>
+        <img style={{width:'100%',height:'100%'}}
+          src={this.state.imgUrl}>
+        </img>
+        </div>
         <div className="app-new-story-input-content">
-          <AddCircleOutlineIcon fontSize='large' color='disabled'/>
-          <input placeholder='Tell your story'/>
+          <textarea style={{fontSize:'25px',width:'700px',height:'500px'}} placeholder='Tell your story'/>
         </div>       
       </div>
     )
+  }
 }
 
 const linkStyle = {

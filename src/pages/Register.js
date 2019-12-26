@@ -4,12 +4,18 @@ import ButtonClear from '../components/ButtonClear';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import '../App.css';
-
-import {
-  Link
-} from "react-router-dom";
+import {Link} from "react-router-dom";
+import Axios from 'axios';
+import {RegisterUser} from '../API/axios'
 
 class Register extends Component{
+  
+  componentDidMount(){
+    if(localStorage.getItem('token')){
+      window.location = '/';
+    }
+  }
+
   render(){
     return (
     <div style={{width:'100%', height:'100vh', display:'flex',alignItems:'center',justifyContent:'center'}}>
@@ -44,23 +50,85 @@ class FormInput extends Component{
   constructor(props){
     super(props);
     this.state = {
-        showEye1: 'inline',
-        showEye2: 'none',
-        hidepass: 'password'
+        email: '',
+        username:'',
+        password:'',
+        showEye1:'inline',
+        showEye2:'none',
+        hidepass:'password',
+        borderpass: '1px solid black',
+        borderemail: '1px solid black',
+        borderusername: '1px solid black',
+        data: []
       }
+  }
+
+  onChange = (event,value) => {
+    if(value === 'pass'){
+      if(event.target.value === "" ){
+        this.setState({ borderpass: '1px solid red' });
+      }else{
+        this.setState({ borderpass: '1px solid black',password:event.target.value });
+      }
+    }else if(value === 'email'){
+      if(event.target.value === "" ){
+        this.setState({ borderemail: '1px solid red' });
+      }else{
+        this.setState({ borderemail: '1px solid black',email:event.target.value });
+      }
+    }else{
+      if(event.target.value === "" ){
+        this.setState({ borderusername: '1px solid red' });
+      }else{
+        this.setState({ borderusername: '1px solid black',username:event.target.value });
+      }
+    }
+  }
+
+  onSubmit = event =>{
+    event.preventDefault();
+    if ((document.getElementById('pass').value === "")|| 
+       ((document.getElementById('username').value === "")||
+       (document.getElementById('email').value === ""))){
+         alert("Username,email and password must be filled")
+    }else{
+      const user = {
+        username: this.state.username,
+        fullname: this.state.username,
+        email: this.state.email,    
+        password: this.state.password
+      }
+
+      Axios.post(RegisterUser,user)
+      .then(res=>{
+        if(res.data[0]['token']){
+          localStorage.setItem('token', res.data[0]['token']);
+          window.location = '/';
+        }else if(res.data[0]['message']){
+          alert(res.data[0]['message'])
+        }else{
+          alert("Cannot connect to server")
+        }
+      })
+    } 
   }
 
   render(){
     return(
     <div className="app-form">
       <div className="app-input-group">
-        <div className ="input-label">Your username</div>
-        <input  type="text" />
+        <div   className ="input-label">Your username</div>
+        <input id='username'  type="text"  
+         onChange={(event)=>this.onChange(event,'username')}  
+         style={{borderBottom:this.state.borderusername}}  />
       </div>
 
       <div className="app-input-group"> 
         <div className ="input-label">Your password</div>
-        <input className="app-inputpass" type={this.state.hidepass}/>
+        <input  id='pass'
+         className="app-inputpass" type={this.state.hidepass} 
+         onChange={(event)=>this.onChange(event,'pass')}  
+         style={{borderBottom:this.state.borderpass}}/>
         <VisibilityOffIcon 
           fontSize="small"
           onClick={()=> this.setState({showEye1:"none", showEye2: "inline",hidepass: 'text'} )}
@@ -75,11 +143,14 @@ class FormInput extends Component{
 
       <div className="app-input-group">
         <div className ="input-label">Your email</div>
-        <input type="email" />
+        <input  id='email' type="email"  
+         onChange={(event)=>this.onChange(event,'email')}  
+         style={{borderBottom:this.state.borderemail}} />
       </div>
 
-      <ButtonPrimary title="Registration">
-      </ButtonPrimary>
+      <div onClick={this.onSubmit}>
+        <ButtonPrimary title="Registration"/>
+      </div>
       
     </div>
     );
